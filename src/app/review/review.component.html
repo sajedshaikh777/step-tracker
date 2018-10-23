@@ -1,7 +1,7 @@
 <!-- STEP INDICATOR -->
 <div class="step-counter">
   <div *ngIf="stepIndicator !== 3">
-    <p>Review Transaction</p>
+    <p>Review Transaction</p> Step {{ stepIndicator }} of 3
   </div>
   <div class="step-indicator" [ngClass]="'step-indicator-' + stepIndicator"></div>
 </div>

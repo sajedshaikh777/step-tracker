@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './create/create.component';
 import { ReviewComponent } from './review/review.component';
 import { ConfirmComponent } from './confirm/confirm.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     ReviewComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule
