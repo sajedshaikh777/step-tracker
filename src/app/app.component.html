@@ -1,4 +1,5 @@
-<!-- DASHBOARD COMPONENTS -->
-<app-create *ngIf="step==STEPS.txCreate"></app-create>
-<app-review *ngIf="step==STEPS.txReview"></app-review>
-<app-confirm *ngIf="step==STEPS.txConfirm"></app-confirm>
+<div class="container">
+    <app-create *ngIf="step==STEPS.txCreate"></app-create>
+    <app-review *ngIf="step==STEPS.txReview"></app-review>
+    <app-confirm *ngIf="step==STEPS.txConfirm"></app-confirm>
+</div>

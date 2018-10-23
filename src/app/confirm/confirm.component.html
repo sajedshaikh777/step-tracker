@@ -1,11 +1,25 @@
 <!-- STEP INDICATOR -->
 <div class="step-counter">
   <div *ngIf="stepIndicator === 3">
-    <p>Confirm Transaction</p> Step {{ stepIndicator }} of 3
+    <h2>Confirm Transaction</h2> <small>Step {{ stepIndicator }} of 3</small>
   </div>
-  <div class="step-indicator" [ngClass]="'step-indicator-' + stepIndicator"></div>
+  <div class="progress progress-height rounded-0">
+    <div class="progress-bar bg-danger progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100"
+      aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
 </div>
 
-<button type="button" role="button" class="button-primary" (click)="newTransactionClick()">
-  New Transaction
-</button>
+
+<div class="d-flex">
+  <button type="button" role="button" class="btn btn-danger btn-sm rounded-0 mr-auto">
+    Print
+  </button>
+
+  <button type=" button" role="button" class="btn btn-link btn-sm">
+    Dashboard
+  </button>
+
+  <button type="button" role="button" class="btn btn-danger btn-sm rounded-0" (click)="newTransactionClick()">
+    New Transaction
+  </button>
+</div>
