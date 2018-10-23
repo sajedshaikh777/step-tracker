@@ -1,0 +1,15 @@
+<!-- STEP INDICATOR -->
+<div class="step-counter">
+  <div *ngIf="stepIndicator !== 3">
+    <p>Create Transaction</p>
+  </div>
+  <div class="step-indicator" [ngClass]="'step-indicator-' + stepIndicator"></div>
+</div>
+
+<button type="button" role="button" class="button-primary">
+  Dashboard
+</button>
+
+<button type="button" role="button" class="button-primary" (click)="continueClick()">
+  Continue
+</button>
