@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CreateComponent } from './create/create.component';
+import { CreateComponent, MyCurrencyPipe, MyCurrencyFormatterDirective } from './create';
 import { ReviewComponent } from './review/review.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,10 +19,14 @@ import { MoveMoneyComponent } from './move-money/move-money.component';
         ConfirmComponent,
         DashboardComponent,
         NotFoundComponent,
-        MoveMoneyComponent
+        MoveMoneyComponent,
+        MyCurrencyPipe,
+        MyCurrencyFormatterDirective,
     ],
     imports: [
         BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot([
             {
                 path: '',
@@ -41,7 +46,13 @@ import { MoveMoneyComponent } from './move-money/move-money.component';
             },
         ])
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    providers: [
+        MyCurrencyPipe
+    ],
+    bootstrap: [AppComponent],
+    exports: [
+        MyCurrencyPipe,
+        MyCurrencyFormatterDirective,
+    ]
 })
 export class AppModule { }
