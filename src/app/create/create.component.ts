@@ -72,6 +72,8 @@ export class CreateComponent extends AppComponent implements OnInit {
 
   onSubmit() {
     console.warn(this.profileForm);
+    // To redirect to review component
+    // DataServicesFactory.setJourneyStep(PanelStateConstant.txReview);
   }
 
   formatAmount(event) {
